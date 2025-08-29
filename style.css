@@ -1,0 +1,367 @@
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+  }
+  body{
+    background: #181818;
+    color: #e5e5e5;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    overflow-x: hidden;
+  }
+  
+  /* layout wrapper */
+  .wrapper{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* HERO */
+  .hero-header{
+    width:100%;
+    min-height: 62vh;
+    background: linear-gradient(180deg, rgba(34,34,34,1) 0%, rgba(26,26,26,1) 100%);
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+  }
+  .container{
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+    gap: 2.5rem;
+    padding-top: 0.5rem;
+  }
+  .hero-pic{
+    width:330px;
+    height:330px;
+    border-radius:50%;
+    overflow:hidden;
+    border: 15px solid #333;
+    box-shadow: 8px 10px 35px rgba(0,0,0,0.6);
+    flex-shrink: 0;
+    background: linear-gradient(180deg,#2b2b2b,#1f1f1f);
+  }
+  .hero-pic img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition: transform .6s ease;
+  }
+  .hero-pic img:hover{ transform: scale(1.08); }
+  
+  .hero-text{
+    max-width:720px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .hero-text h5{
+    color:#dcdcdc;
+    font-size:14px;
+    font-weight:500;
+  }
+  .hero-text h5 .input{ color:#007ced; font-weight:600; font-size:15px; }
+  .hero-text h1{
+    color:#007ced;
+    font-size:3.2rem;
+    line-height:1;
+    margin-top:2px;
+  }
+  .hero-text p{
+    color:#dcdcdc;
+    max-width:720px;
+    line-height:1.55;
+  }
+  
+  /* buttons: unified sizing + LinkedIn icon */
+  .btn-group{
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  /* base button — unified padding so all buttons are identical size */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;             /* space between icon + text */
+    padding: 12px 26px;   /* same padding used for all buttons */
+    border-radius: 30px;
+    border: 2px solid rgba(229,229,229,0.12);
+    background: #222;
+    color: #fff;
+    box-shadow: 0 10px 16px -10px rgba(0,0,0,0.8);
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1;
+    transition: transform .16s ease, box-shadow .18s ease;
+  }
+  /* resume (blue accent) */
+  .btn.active{
+    border-color: #007ced;
+    box-shadow: 0 8px 20px -6px rgba(0,124,237,0.18);
+  }
+  /* linkedin button style (LinkedIn blue) */
+  .btn.linkedin{
+    border-color: #0A66C2;
+    color: #eaf3ff;
+    background: rgba(10,102,194,0.06);
+    box-shadow: 0 6px 14px -8px rgba(10,102,194,0.18);
+  }
+  
+  /* LinkedIn SVG/icon styling — uses currentColor and matches text size */
+  .linkedin-icon{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;   /* icon color follows text color */
+  }
+  .btn-text {
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  /* hover states */
+  .btn:hover{
+    transform: translateY(-2px);
+  }
+  
+  /* sections */
+  .section{
+    padding: 60px 0;
+    background: transparent;
+  }
+  .section.alt{
+    background: linear-gradient(180deg, rgba(25,25,25,0.5), transparent);
+  }
+  
+  .section-header{
+    margin-bottom: 18px;
+  }
+  .section-header h2{
+    color: #e9eef6;
+    font-size: 1.8rem;
+    margin-bottom:6px;
+  }
+  .muted{
+    color: #bdbdbd;
+  }
+  .small{ font-size: 0.92rem; }
+  .section-header .muted{ font-size: 0.95rem; }
+  
+  /* Projects grid (6 slots) */
+  .portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 12px;
+  }
+  
+  /* Project card */
+  .project-card{
+    background: linear-gradient(180deg, #151515, #1a1a1a);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.6);
+    transition: transform .28s ease, box-shadow .28s ease;
+    display:flex;
+    flex-direction: column;
+    min-height: 260px;
+  }
+  .project-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+  }
+  .project-media img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    display:block;
+  }
+  .project-body{
+    padding: 14px;
+    display:flex;
+    flex-direction: column;
+    gap: 8px;
+    flex:1;
+  }
+  .project-body h3{
+    font-size: 1.05rem;
+    color:#fff;
+  }
+  .project-body p{
+    color:#cfcfcf;
+    font-size:0.95rem;
+    flex:1;
+  }
+  .project-meta{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:6px;
+    flex-wrap: wrap;
+  }
+  .tag{
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding:6px 8px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color:#dcdcdc;
+  }
+  
+  /* --- Updated Certifications styles (clean, aligned two-column layout) --- */
+  .cert-grid{
+    display:flex;
+    flex-direction: column;
+    gap: 16px;         /* slightly tighter vertical gap between cards */
+    margin-top: 16px;
+  }
+  
+  /* Use a stable two-column layout: left column for title/issuer, right column for description */
+  .cert-card{
+    display: grid;
+    grid-template-columns: 320px 1fr; /* fixed left column, flexible right column */
+    gap: 22px;
+    align-items: start;               /* align top so text lines up */
+    padding: 18px;                    /* more breathing room */
+    background: rgba(255,255,255,0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  }
+  
+  /* Left column - title + issuer stacked neatly */
+  .cert-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  
+  /* Certificate title */
+  .cert-left .cert-title{
+    font-weight:700;
+    color:#ffffff;
+    font-size: 1.02rem;
+    line-height: 1.15;
+  }
+  
+  /* Issuer/date */
+  .cert-left .cert-issuer{
+    color: #bdbdbd;
+    font-size: 0.92rem;
+    line-height: 1.3;
+  }
+  
+  /* Right column - description */
+  .cert-right{
+    color: #d7d7d7;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+  }
+  
+  /* Optional: visually emphasize the first card slightly */
+  .cert-grid article.cert-card:first-child{
+    border-color: rgba(0,124,237,0.06);
+  }
+  
+  /* Skills grid / dashboard */
+  .skills-grid{
+    display:flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 8px;
+  }
+  .skill{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.02);
+  }
+  .skill-left strong{ display:block; margin-bottom:4px; }
+  .skill-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-width: 280px;
+    width: 45%;
+  }
+  .skill-bar{
+    background: rgba(255,255,255,0.06);
+    height: 12px;
+    width: 100%;
+    border-radius: 999px;
+    overflow:hidden;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);
+  }
+  .skill-bar .progress{
+    height:100%;
+    background: linear-gradient(90deg,#007ced,#5bc0ff);
+    width: 50%;
+    border-radius: 999px;
+    transition: width .6s ease;
+  }
+  .skill-percent{
+    min-width:44px;
+    text-align:right;
+    color:#dcdcdc;
+    font-weight:600;
+  }
+  
+  /* footer */
+  .site-footer{
+    padding: 26px 0;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.03);
+    color: #bdbdbd;
+    background: transparent;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1100px){
+    .portfolio-grid{ grid-template-columns: repeat(2, 1fr); }
+    .container{ gap: 1.2rem; }
+    .cert-card{ grid-template-columns: 260px 1fr; gap: 18px; }
+  }
+  
+  @media (max-width: 768px){
+    .container{
+      flex-direction: column;
+      padding-top: 10px;
+      align-items: center;
+      text-align: center;
+    }
+    .hero-pic{ width: 220px; height:220px; border-width: 12px; }
+    .hero-text h1{ font-size: 2.2rem; }
+    .portfolio-grid{ grid-template-columns: 1fr; }
+    .skill-right{ width: 55%; min-width:0; }
+    /* On small screens stack certification columns */
+    .cert-card{
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 14px;
+    }
+    .cert-left { align-items: flex-start; text-align: left; }
+    .cert-left .cert-title{ font-size: 1rem; }
+    .cert-right{ font-size: 0.96rem; }
+  }
+  
+  @media (max-width: 420px){
+    .hero-pic{ width: 180px; height:180px; }
+    .hero-text h1{ font-size: 1.8rem; }
+    .wrapper{ padding: 0 14px; }
+  }
+  

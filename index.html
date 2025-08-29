@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Website</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hero-header">
+    <div class="wrapper">
+      <div class="container">
+        <div class="hero-pic">
+          <!-- Replace this image with your profile picture -->
+          <img src="images/Main_photo.png" alt="Profile photo">
+        </div>
+
+        <div class="hero-text">
+          <h5>Hi I'm a <span class="input">CS Student -> Software Developer</span></h5>
+
+          <h1>Arya Kumar</h1>
+
+          <p>
+            I am a dedicated and displinced student passionate about computer science. I am junior at Texas A&M pursuing a Bachelor's in the field, a minor in Mathematics, and an Associate's degree in Mathematics to accompany my computing knowledge. I am always looking for opportunites to apply my knowledge into real-world projects and industry. Please feel free to download my resume, checkout my LinkedIn, and have an overview on my personal projects :]
+          </p>
+
+          <div class="btn-group">
+            <!-- Resume button (opens resume.pdf in new tab). Replace href if you host resume elsewhere. -->
+            <a href="./AryaKumar_Resume.pdf" class="btn active" target="_blank" rel="noopener noreferrer">Download Resume/CV</a>
+
+            <!-- LinkedIn button with inline SVG icon.
+                 Replace the href with your LinkedIn profile URL, e.g.:
+                 href="https://www.linkedin.com/in/yourprofile"
+            -->
+            <a href="https://www.linkedin.com/in/arkaryakumar/" class="btn linkedin" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
+              <!-- LinkedIn SVG icon (inline so no external assets needed) -->
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="linkedin-icon" xmlns="http://www.w3.org/2000/svg">
+                <title>LinkedIn</title>
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.99h5V24H0V8.99zM7.5 8.99h4.78v2.05h.07c.67-1.27 2.31-2.61 4.76-2.61 5.09 0 6.02 3.35 6.02 7.7V24h-5V16.8c0-1.72-.03-3.93-2.4-3.93-2.4 0-2.76 1.87-2.76 3.8V24h-5V8.99z"/>
+              </svg>
+
+              <span class="btn-text">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects / Experience -->
+  <section id="projects" class="section">
+    <div class="wrapper">
+      <div class="section-header">
+        <h2>Projects / Experience</h2>
+        <p class="muted">Some of my proudest accomplishments from being able to participate in some amazing programs to building some cool projects!</p>
+        <p class="muted">NOTE: Currently working on including my projects to a GitHub portfolio to showcase as well</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- ---------- PROJECT 1 ---------- -->
+        <article class="project-card">
+          <div class="project-media">
+            <!-- Change to your project image: images/project1.jpg -->
+            <img src="images/LM_logo.jpg" alt="Project 1 thumbnail">
+          </div>
+          <div class="project-body">
+            <h3>Lockheed Martin - SWE Intern</h3>
+            <p class="small">Summer 2025 Software Engineer Intern working in F-35 Core Processing Software developing automation tooling for development and testing teams while maintaining Secret clearance.</p>
+            <div class="project-meta">
+              <span class="tag">Python</span>
+              <span class="tag">Linux</span>
+              <span class="tag">DevOps</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">IaC</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- PROJECT 2 ---------- -->
+        <article class="project-card">
+          <div class="project-media">
+            <img src="images/ML_image.png" alt="Project 2 thumbnail">
+          </div>
+          <div class="project-body">
+            <h3>Credit Card Fraud Detection Model</h3>
+            <p class="small">Developed a machine learning pipeline to detect fraudulent transactions, engineering features and using various models to improve fraud detection by 15%. This pipeline was trained on imbalanced data, achieving an AUC of 0.97.</p>
+            <div class="project-meta">
+              <span class="tag">Python</span>
+              <span class="tag">ML</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Scikit-learn</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- PROJECT 3 ---------- -->
+        <article class="project-card">
+          <div class="project-media">
+            <img src="images/Website_logo.png" alt="Project 3 thumbnail">
+          </div>
+          <div class="project-body">
+            <h3>Personal Portfolio Website</h3>
+            <p class="small">Starting with an interest of showcasing my growing accolades and experiences, I wanted to develop my own personal portfolio website. Learning HTML and CSS along the way and ending up with the beautiful website you see before you! I am continuing to update and learn new features.</p>
+            <div class="project-meta">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Web Development</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- PROJECT 4 ---------- -->
+        <article class="project-card">
+          <div class="project-media">
+            <img src="images/AI4ALL_logo.png" alt="Project 4 thumbnail">
+          </div>
+          <div class="project-body">
+            <h3>AI4ALL - Ignite Accelerator Program</h3>
+            <p class="small">Developed an AI project, "SproutDoc", in a virtual accelerator program with a team. This plant disease detection program uses computer vision and a custom deep learning model, achieving 94% accuracy.</p>
+            <div class="project-meta">
+              <span class="tag">Python</span>
+              <span class="tag">AI/ML</span>
+              <span class="tag">Tensorflow</span>
+              <span class="tag">OpenCV</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- PROJECT 5 ---------- -->
+        <article class="project-card">
+          <div class="project-media">
+            <img src="images/Game_image.png" alt="Project 5 thumbnail">
+          </div>
+          <div class="project-body">
+            <h3>2D Survival Game</h3>
+            <p class="small">My friend and I turned our free time into development time for a two-dimensional survival game with random world generation. We developed in C with Unity's Game Engine, sharing the work, and learning about version control and software development practices.</p>
+            <div class="project-meta">
+              <span class="tag">C#</span>
+              <span class="tag">Unity</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Collaboration</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- PROJECT 6 ---------- -->
+        <article class="project-card">
+          <div class="project-media">
+            <img src="images/NASA_logo.png" alt="Project 6 thumbnail">
+          </div>
+          <div class="project-body">
+            <h3>NASA Moonshot - Lead Engineer</h3>
+            <p class="small">Lead Engineer for a subteam, I managed the design of spacecraft CAD models for a NASA Artemis Program mission. My role involved applying STEM skills to coordinate with other teams, ensuring all aspects of the mission's logistics were aligned and planned efficiently.</p>
+            <div class="project-meta">
+              <span class="tag">CAD</span>
+              <span class="tag">STEM</span>
+              <span class="tag">Leadership</span>
+              <span class="tag">Teamwork</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="section alt">
+    <div class="wrapper">
+      <div class="section-header">
+        <h2>Certifications</h2>
+        <p class="muted">Some of my personal endeavers in areas I find interesting and useful!</p>
+      </div>
+
+      <div class="cert-grid">
+        <!-- ---------- CERTIFICATE 1 ---------- -->
+        <article class="cert-card">
+          <div class="cert-left">
+            <div class="cert-title">AWS Cloud Technical Essentials</div>
+            <div class="cert-issuer muted small">Issued by: Amazon Web Services / Coursera — August 2025</div>
+          </div>
+          <div class="cert-right">
+             Designed secure and scalable solutions using EC2, S3, RDS, and VPC, with an emphasis on load balancing and auto scaling. Configured IAM roles and policies to apply the shared-responsibility model. Monitored and optimized resources with CloudWatch, evaluating and implementing storage solutions like S3, EBS, and DynamoDB.
+          </div>
+        </article>
+
+        <!-- ---------- CERTIFICATE 2 ---------- -->
+        <article class="cert-card">
+          <div class="cert-left">
+            <div class="cert-title">Machine Learning in Python</div>
+            <div class="cert-issuer muted small">Issued by: IBM / Coursera — December 2024</div>
+          </div>
+          <div class="cert-right">
+            Developed technical expertise in Scikit-learn, TensorFlow, and Keras for implementing supervised, unsupervised, and deep learning models in Python.
+          </div>
+        </article>
+
+        <!-- ---------- CERTIFICATE 3 ---------- -->
+        <article class="cert-card">
+          <div class="cert-left">
+            <div class="cert-title">Programming in C++</div>
+            <div class="cert-issuer muted small">Issued by: Codio / Coursera — Janurary 2024</div>
+          </div>
+          <div class="cert-right">
+            Four-course series specializing in object-oriented programming, classes, inheritance, abstraction, encapsulation, polymorphism, IO, and data structures.
+          </div>
+        </article>
+
+        <!-- ---------- CERTIFICATE 4 ---------- -->
+        <article class="cert-card">
+          <div class="cert-left">
+            <div class="cert-title">Python Basics</div>
+            <div class="cert-issuer muted small">Issued by: University of Michigan / Coursera — July 2023</div>
+          </div>
+          <div class="cert-right">
+            Course including Python functions, IO, classes, and data structures.
+          </div>
+        </article>
+
+        <!-- ---------- CERTIFICATE 1 ---------- -->
+        <article class="cert-card">
+          <div class="cert-left">
+            <div class="cert-title">Remote Pilot Certification</div>
+            <div class="cert-issuer muted small">Issued by: Federal Aviation Administration — November 2022</div>
+          </div>
+          <div class="cert-right">
+            Certified under the FAA Part 107 regulations to operate small unmanned aircraft systems (sUAS).
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="wrapper">
+      <div class="section-header">
+        <h2>Skills</h2>
+        <p class="muted">My most proficient programming languages!</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill">
+          <div class="skill-left">
+            <strong>Python</strong>
+            <span class="muted small">Matplotlib, Scikit-learn, Pandas, Numpy, TensorFlow, OpenCV</span>
+          </div>
+          <div class="skill-right">
+            <div class="skill-bar">
+              <div class="progress" style="width: 90%"></div>
+            </div>
+            <div class="skill-percent">90%</div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-left">
+            <strong>C++</strong>
+            <span class="muted small">Data Structures, OOP</span>
+          </div>
+          <div class="skill-right">
+            <div class="skill-bar">
+              <div class="progress" style="width: 85%"></div>
+            </div>
+            <div class="skill-percent">85%</div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-left">
+            <strong>Java</strong>
+            <span class="muted small"></span>
+          </div>
+          <div class="skill-right">
+            <div class="skill-bar">
+              <div class="progress" style="width: 70%"></div>
+            </div>
+            <div class="skill-percent">70%</div>
+          </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-left">
+              <strong>HTML & CSS</strong>
+              <span class="muted small">Self-taught while making this website :]</span>
+            </div>
+            <div class="skill-right">
+              <div class="skill-bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
+              <div class="skill-percent">60%</div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>© <span id="year"></span> Arya Kumar — Designed with 💙</p>
+    </div>
+  </footer>
+
+  <script>
+    // show current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
